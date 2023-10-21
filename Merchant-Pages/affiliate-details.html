@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BIGAFFI: Merchant Dashboard</title>
+        <link rel="shortcut icon" href="../images/bigaffilogo.jpeg" type="image/x-icon">
+        <!-- *******************Fontawesome icons***************************** -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+        <!-- *********************************Boxi-icons************************************ -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <!-- ***********************************Montserrat********************************** -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+        <!-- *******************local stylesheet******************** -->
+        <link rel="stylesheet" href="../dashboard-pages/stylesheet/global.css">
+        <link rel="stylesheet" href="../dashboard-pages/stylesheet/dashboard.css">
+		<link rel="stylesheet" href="./style/affiliate-details.css">
+    </head>
+    <body>
+    <!-- ***********************Dashboard Sidebar************************************** -->
+    <!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="./merchant.html" class="brand"><img class="logo" style="height: 36px; width: 36px;" src="../images/bigaffilogo.jpeg" alt=""> Big<span>Affi</span></a>
+		<ul class="side-menu">
+			<li><a href="./merchant.html" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
+			<li class="divider" data-text="Marketplace">Marketplace</li>
+			<li>
+				<a href="#"><i class='bx bxs-group icon'></i>Merchant<i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="./affiliate.html">Affiliates</a></li>
+					<li><a href="./mobile-app.html">Mobile App</a></li>
+					<li><a href="./sales.html">Sales</a></li>
+					<li><a href="./leaderbors.html">Leaderboard</a></li>
+					<li><a href="./multilevel.html">MLM</a></li>
+				</ul>
+			</li>
+			<li><a href="./commission.html"><i class="fa-solid fa-percent icon"></i> Commission</a></li>
+			<li><a href="./coupon.html"><i class="fa-solid fa-tag icon"></i> Coupon</a></li>
+			<li><a href="./payment.html"><i class='bx bx-dollar icon' ></i> Payment</a></li>
+			<li class="divider" data-text="Uploads">Uploads</li>
+			<li>
+				<a href="#"><i class="fa-solid fa-image icon"></i>  Media Center <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+                    <li><a href="./upload-media.html"><i class="fa-solid fa-image icon"></i> Media</a></li>
+                    <li><a href="./marketplace.html"><i class="fa-solid fa-shop icon"></i>Marketplace</a></li>
+					<li><a href="./store.html"><i class="fa-solid fa-earth-americas icon"></i>Store</a></li>
+					<li><a href="#"><i class='bx bx-lock-alt icon' ></i> Privacy</a></li>
+					<li><a href="#"><i class='bx bxs-contact icon' ></i> T & C</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="fa-solid fa-bullhorn icon"></i>  Campaign <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+                    <li><a href="./create-campain.html">Create Campaign</a></li>
+                    <li><a href="./all-campaign.html">All Campaign</a></li>
+				</ul>
+			</li>
+			<li><a href="./settings.html"><i class='bx bx-cog icon' ></i>Settings</a></li>
+			<li><a href="#"><i class='bx bxs-contact icon' ></i> Contact Us</a></li>
+			<li><a href="#" data-bs-toggle="modal" data-bs-target="#logOut"><i class='bx bxs-log-out-circle icon' ></i> Logout</a></li>
+		</ul>
+		<div class="ads">
+			<div class="wrapper">
+				<a href="#" class="btn-upgrade">Upgrade</a>
+				<p>Become a <span>PRO</span> member and enjoy <span>All Features</span></p>
+			</div>
+		</div>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<form action="#">
+				<div class="form-group">
+					<input type="text" placeholder="Search...">
+					<i class='bx bx-search icon' ></i>
+				</div>
+			</form>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-bell icon' ></i>
+				<span class="badge">5</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon'></i>
+				<span class="badge">8</span>
+			</a>
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="../images/female_avatar_efig.svg" alt="">
+				<ul class="profile-link">
+					<li><a href="#"><i class='bx bxs-user-circle icon' ></i> Profile</a></li>
+					<li><a href="./settings.html"><i class='bx bxs-cog' ></i> Settings</a></li>
+					<li><a href="#" data-bs-toggle="modal" data-bs-target="#logOut"><i class='bx bxs-log-out-circle' ></i> Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div>
+                <h1 class="title">Affiliate Info</h1>
+            </div>
+			<ul class="breadcrumbs">
+				<li><a href="./merchant.html">Home</a></li>
+				<li class="divider">/</li>
+				<li><a href="./affiliate.html" class="active">Affiliates Info</a></li>
+			</ul>
+			<div class="affi-name">
+				<i class="fa-solid fa-user"></i>
+				<h2>Jos Buttler</h2>
+			</div>
+			<div class="active-time">
+				<small>Last Active: <span>Today 10:22 AM</span></small>
+			</div>
+            <div class="card mt-4">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs id="myTab" role="tablist"">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#info" aria-controls="info" aria-selected="true">Info</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                     <a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#statistics" aria-controls="statistics" aria-selected="true">Statistics</a>
+                    </li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#commission" aria-controls="commission" aria-selected="true">Commission</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#transection" aria-controls="transection" aria-selected="true">Transection</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#sales" aria-controls="sales" aria-selected="true">Sales</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#payment" aria-controls="payment" aria-selected="true">Payment</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#setting" aria-controls="setting" aria-selected="true">Setting</a>
+					</li>
+                  </ul>
+                </div>
+                <div class="card-body tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div class="row mt-2">
+							<div class="col-md-6">
+								<div class="affiliate-info">
+									<h3 class="heading">Basic Information</h3>
+									<div class="info-box">
+										<p>Joined On</p>
+										<small>10 Oct 2023</small>
+									</div>
+									<div class="info-box">
+										<p>IP Address</p>
+										<small>248.228.87.205</small>
+									</div>
+									<div class="info-box">
+										<p>Email</p>
+										<small>josIsTheBoss@aus.com</small>
+									</div>
+									<div class="info-box">
+										<p>Referral Link</p>
+										<small><a href="#000">josbuttler.com/?ref2029h33</a></small>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="affiliate-info">
+									<h3 class="heading">Actions</h3>
+									<div class="info-box">
+										<p><a href="">Send Welcome message to the affiliate</a></p>
+										<small></small>
+									</div>
+									<div class="info-box">
+										<p><a href="" class="block">Block Affiliate</a></p>
+										<small></small>
+									</div>
+									<div class="info-box">
+										<p><a href="" class="dismiss">Dismiss Approvel</a></p>
+										<small></small>
+									</div>
+									<div class="info-box">
+										<p><a href="../dashboard-pages/single-store.html" target="_blank">Visit affiliate dashboard</a></p>
+										<small><a href="">Copy</a></small>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <!-- ================statistics=============== -->
+                    <div class="tab-pane fade show" id="statistics" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+						<div class="row mt-4">
+							<div class="mb-3 col-md-6 date">
+								<label for="exampleFormControlInput2" class="form-label p-2">Start Date</label>
+								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+							</div>
+							<div class="mb-3 col-md-6 date">
+								<label for="exampleFormControlInput2" class="form-label p-2">End Date</label>
+								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+							</div>
+							<div class=" row statistics">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="statistics-box">
+                                        <img src="../dashboard-pages/images/order.png" alt="">
+                                        <div class="d-flex mt-2 align-items-center">
+                                            <h2 class="me-auto">102</h2>
+                                            <small class="ms-auto">Order</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="statistics-box">
+                                        <img src="../dashboard-pages/images/sales.png" alt="">
+                                        <div class="d-flex mt-2 align-items-center">
+                                            <h2 class="me-auto"><span>102</h2>
+                                            <small class="ms-auto">Revenue</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="statistics-box">
+                                        <img src="../dashboard-pages/images/money_2454282.png" alt="">
+                                        <div class="d-flex mt-2 align-items-center">
+                                            <h2 class="me-auto"><span>$</span>102</h2>
+                                            <small class="ms-auto">Total Commissions</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="statistics-box">
+                                        <img src="../dashboard-pages/images/payment_1067281.png" alt="">
+                                        <div class="d-flex mt-2 align-items-center">
+                                            <h2 class="me-auto"><span>$</span>102</h2>
+                                            <small class="ms-auto">Other Commissions</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+                    </div>
+					<!-- ================Commission=============== -->
+                    <div class="tab-pane fade show" id="commission" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+						<div class="row mt-2 set-commission">
+							<div class="col-md-6">
+								<div>
+									<h2>Default Commission</h2>
+									<p>Standard commission applies on any product sold by the affiliate</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div>
+									<h2 class="commission-value">10<span>%</span></h2>
+									<div class="tag-list">
+										<span class="tag default">default</span>
+										<a href="" data-bs-toggle="modal" data-bs-target="#manualCommission">Assign Manual Commission</a>
+									</div>
+									<a href="" data-bs-toggle="modal" data-bs-target="#switchCommission">Switch to default commission</a>
+								</div>
+							</div>
+						</div>
+                    </div>
+					<!-- ================transection=============== -->
+                    <div class="tab-pane fade show" id="transection" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+						<div class="row">
+							<div class="mb-3 col-md-6 date">
+								<label for="exampleFormControlInput2" class="form-label p-2">Start Date</label>
+								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+							</div>
+							<div class="mb-3 col-md-6 date">
+								<label for="exampleFormControlInput2" class="form-label p-2">End Date</label>
+								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+							</div>
+						</div>
+						<div class="table-section">
+							<table>
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Transaction</th>
+										<th>Amount</th>
+										<th>Closing Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="timestamp">
+											<span class="time">10-Oct-2023</span>
+											<span class="date">02:45 pm</span>
+										</td>
+										<td>
+											<span>Wallet adjustment</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="timestamp">
+											<span class="time">10-Oct-2023</span>
+											<span class="date">02:45 pm</span>
+										</td>
+										<td>
+											<span>Wallet adjustment</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="timestamp">
+											<span class="time">10-Oct-2023</span>
+											<span class="date">02:45 pm</span>
+										</td>
+										<td>
+											<span>Wallet adjustment</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="page-count mb-1">
+							<div>
+								<select name="page-count" class="">
+									<option value="10">10 per page</option>
+									<option value="20">20 per page</option>
+									<option value="30">30 per page</option>
+									<option value="40">40 per page</option>
+								  </select>
+							</div>
+							<div>
+								<p>Page <span>1</span> of <span>1</span></p>
+							</div>
+							<div class="next-page">
+								<a href="#nextPage">Next Page</a>
+							</div>
+						</div>
+                    </div>
+					 <!-- ================Sales=============== -->
+					 <div class="tab-pane fade show" id="sales" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+						<div class="row mt-4">
+							<div class="mb-3 col-md-6 date">
+								<label for="exampleFormControlInput2" class="form-label p-2">Start Date</label>
+								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+							</div>
+							<div class="mb-3 col-md-6 date">
+								<label for="exampleFormControlInput2" class="form-label p-2">End Date</label>
+								<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+							</div>
+							<div class=" row statistics">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="statistics-box">
+                                        <img src="../dashboard-pages/images/order.png" alt="">
+                                        <div class="d-flex mt-2 align-items-center">
+                                            <h2 class="me-auto">102</h2>
+                                            <small class="ms-auto">Order</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="statistics-box">
+                                        <img src="../dashboard-pages/images/sale_8771950.png" alt="">
+                                        <div class="d-flex mt-2 align-items-center">
+                                            <h2 class="me-auto"><span>$</span>102</h2>
+                                            <small class="ms-auto">Sales</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="statistics-box">
+                                        <img src="../dashboard-pages/images/sales.png" alt="">
+                                        <div class="d-flex mt-2 align-items-center">
+                                            <h2 class="me-auto">102</h2>
+                                            <small class="ms-auto">Revenue</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="statistics-box">
+                                        <img src="../dashboard-pages/images/payment_1067281.png" alt="">
+                                        <div class="d-flex mt-2 align-items-center">
+                                            <h2 class="me-auto"><span>$</span>102</h2>
+                                            <small class="ms-auto">Commissions</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+						<div class="table-section">
+							<table>
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Order</th>
+										<th>Amount</th>
+										<th>Commission</th>
+										<th>Status</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="timestamp">
+											<span class="time">10-Oct-2023</span>
+											<span class="date">02:45 pm</span>
+										</td>
+										<td>
+											<span>200</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>Success</span>
+										</td>
+										<td class="action">
+											<a href="#000" class="approve">Approve</a>
+											<a href="#000" class="reject">Reject</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="timestamp">
+											<span class="time">10-Oct-2023</span>
+											<span class="date">02:45 pm</span>
+										</td>
+										<td>
+											<span>200</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>Success</span>
+										</td>
+										<td class="action">
+											<a href="#000" class="approve">Approve</a>
+											<a href="#000" class="reject">Reject</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="timestamp">
+											<span class="time">10-Oct-2023</span>
+											<span class="date">02:45 pm</span>
+										</td>
+										<td>
+											<span>200</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>Success</span>
+										</td>
+										<td class="action">
+											<a href="#000" class="approve">Approve</a>
+											<a href="#000" class="reject">Reject</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="page-count mb-1">
+							<div>
+								<select name="page-count" class="">
+									<option value="10">10 per page</option>
+									<option value="20">20 per page</option>
+									<option value="30">30 per page</option>
+									<option value="40">40 per page</option>
+								  </select>
+							</div>
+							<div>
+								<p>Page <span>1</span> of <span>1</span></p>
+							</div>
+							<div class="next-page">
+								<a href="#nextPage">Next Page</a>
+							</div>
+						</div>
+                    </div>
+					 <!-- ================Payment=============== -->
+					<div class="tab-pane fade show" id="payment" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+						<div class="row">
+							<div class=" row statistics">
+                                <div class="col-md-6">
+                                    <div class="affiliate-info">
+										<h3 class="heading">Payment Method</h3>
+										<div class="info-box">
+											<p>Payment Method</p>
+											<small>UPI</small>
+										</div>
+										<div class="info-box">
+											<p>Payment Id</p>
+											<small>pay4jos@paytm.com</small>
+										</div>
+										<div class="info-box">
+											<p><a href="#000">Change Payment Mehtod</a></p>
+										</div>
+									</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="affiliate-info">
+										<h3 class="heading">Payouts</h3>
+										<div class="info-box">
+											<p>Total Payout</p>
+											<small>$999</small>
+										</div>
+										<div class="info-box">
+											<p>Pending Payments</p>
+											<small>$99</small>
+										</div>
+										<div class="info-box">
+											<p>Total Paid</p>
+											<small>$000</small>
+										</div>
+									</div>
+                                </div>
+                            </div>
+							<div class="row">
+								<div class="mb-3 col-md-6 date">
+									<label for="exampleFormControlInput2" class="form-label p-2">Start Date</label>
+									<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+								</div>
+								<div class="mb-3 col-md-6 date">
+									<label for="exampleFormControlInput2" class="form-label p-2">End Date</label>
+									<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+								</div>
+							</div>
+						</div>
+						<div class="table-section">
+							<table>
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Amount</th>
+										<th>Payment Details</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="timestamp">
+											<span class="time">10-Oct-2023</span>
+											<span class="date">02:45 pm</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>Wallet Transection</span>
+										</td>
+										<td class="action">
+											<a href="#000" class="approve">Approve</a>
+											<a href="#000" class="reject">Reject</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="timestamp">
+											<span class="time">10-Oct-2023</span>
+											<span class="date">02:45 pm</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>Wallet Transection</span>
+										</td>
+										<td class="action">
+											<a href="#000" class="approve">Approve</a>
+											<a href="#000" class="reject">Reject</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="timestamp">
+											<span class="time">10-Oct-2023</span>
+											<span class="date">02:45 pm</span>
+										</td>
+										<td>
+											<span>$ 148</span>
+										</td>
+										<td>
+											<span>Wallet Transection</span>
+										</td>
+										<td class="action">
+											<a href="#000" class="approve">Approve</a>
+											<a href="#000" class="reject">Reject</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="page-count mb-1">
+							<div>
+								<select name="page-count" class="">
+									<option value="10">10 per page</option>
+									<option value="20">20 per page</option>
+									<option value="30">30 per page</option>
+									<option value="40">40 per page</option>
+								  </select>
+							</div>
+							<div>
+								<p>Page <span>1</span> of <span>1</span></p>
+							</div>
+							<div class="next-page">
+								<a href="#nextPage">Next Page</a>
+							</div>
+						</div>
+                    </div>
+					<!-- ================Settings=============== -->
+					<div class="tab-pane fade show" id="setting" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+						<div class="row">
+							<div class="col-md-8 mx-auto payment-setting">
+								<div>
+									<h2>Pyament Settings</h2>
+									<p>You can customize how you like to pay your affiliates.</p>
+									<small>(Keep input fields empty to apply default settings)</small>
+								</div>
+								<form class="row" action="#000">
+									<div class="col-md-12 mb-3 mt-3">
+										<label for="inputReport" class="form-label">Select desired payment method</label>
+										<select id="paymentMethod" class="form-select" onchange="displayPaymentMethod(this)">
+										  <option selected>Select Payment Method</option>
+										  <option value="1">UPI</option>
+										  <option value="2">Paypal</option>
+										  <option value="3">Debit/Credit Card</option>
+										  <option value="4">Bank Transfer</option>
+										</select>
+									</div>
+									<div class="col-md-12 mb-3 d-none" id="upi">
+										<label for="formGroupExampleInput" class="form-label">UPI Id</label>
+										<input type="email" class="form-control" id="formGroupExampleInput" placeholder="Eg. pay4jos@paytm.com">
+									</div>
+									<div class="col-md-12 mb-3 d-none" id="paypal">
+										<label for="formGroupExampleInput" class="form-label">Paypal Email</label>
+										<input type="email" class="form-control" id="formGroupExampleInput" placeholder="Eg. pay4jos@paytm.com">
+									</div>
+									<div class="col-md-12 mb-3 d-none" id="card">
+										<div>
+											<label for="formGroupExampleInput" class="form-label">Name on card</label>
+											<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Eg. Jason Holder">
+										</div>
+										<div class="mt-3">
+											<label for="formGroupExampleInput" class="form-label">Debit/Credit Card Number</label>
+											<input type="text" class="form-control" id="formGroupExampleInput">
+										</div>
+									</div>
+									<div class="col-md-12 mb-3 d-none" id="bankTransfer">
+										<div>
+											<label for="formGroupExampleInput" class="form-label">Account Holder Name</label>
+											<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Eg. Jason Holder">
+										</div>
+										<div class="mt-3">
+											<label for="formGroupExampleInput" class="form-label">Account Number</label>
+											<input type="text" class="form-control" id="formGroupExampleInput">
+										</div>
+										<div class="mt-3">
+											<label for="formGroupExampleInput" class="form-label">IFSC Code</label>
+											<input type="text" class="form-control" id="formGroupExampleInput">
+										</div>
+									</div>
+									<div class="col-md-12 mb-3">
+										<label for="basic-url" class="form-label">Minimum Payout</label>
+										<div class="input-group">
+											<span class="input-group-text" id="basic-addon3">$</span>
+											<input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+										</div>
+									</div>
+									<div class="col-md-12 mb-3">
+										<label for="basic-url" class="form-label">Commission hold time</label>
+										<div class="input-group mb-3">
+											<span class="input-group-text" id="basic-addon3">Days</span>
+											<input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+										</div>
+									</div>
+									<div class="col-md-12 text-center">
+										<div class="input-group mb-3 text-center submit">
+											<input type="submit" value="submit">
+										</div>
+									</div>			
+								</form>
+							</div>
+						</div>
+						<!-- ********** -->
+						<div class="row mt-4">
+							<div class="col-md-8 mx-auto profile-info">
+								<div>
+									<h2>Affiliate Profile</h2>
+								</div>
+								<form class="row" action="#000">
+									<div class="mb-3 col-md-6">
+										<label for="exampleFormControlInput2" class="form-label">Name</label>
+										<input type="text" class="form-control" id="exampleFormControlInput" placeholder="your name">
+									</div>
+									<div class="mb-3 col-md-6">
+										<label for="exampleFormControlInput2" class="form-label">Email</label>
+										<input type="email" class="form-control" id="exampleFormControlInput" placeholder="example@email.com">
+									</div>
+									<div class="mb-3 col-12">
+										<label for="exampleFormControlInput2" class="form-label">Customize Refferal Code</label>
+										<input type="text" class="form-control" id="exampleFormControlInput" placeholder="existing refferel code rendered here">
+									</div>
+									<div class="col-md-6">
+										<label for="basic-url" class="form-label">Instagram</label>
+										<div class="input-group mb-3">
+											<span class="input-group-text" id="basic-addon3">@</span>
+											<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<label for="basic-url" class="form-label">Facebook</label>
+										<div class="input-group mb-3">
+											<span class="input-group-text" id="basic-addon3">@</span>
+											<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+										</div>
+									</div>
+									<div class="col-md-6">
+									  <label for="basic-url" class="form-label">LinkedIn</label>
+									  <div class="input-group mb-3">
+										  <span class="input-group-text" id="basic-addon3">@</span>
+										  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+									  </div>
+									</div>
+									<div class="col-md-6">
+									  <label for="basic-url" class="form-label">Twitter</label>
+									  <div class="input-group mb-3">
+										  <span class="input-group-text" id="basic-addon3">@</span>
+										  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+									  </div>
+									</div>
+									<div class="col-md-6">
+									  <label for="basic-url" class="form-label">Your Website</label>
+									  <div class="input-group mb-3">
+										<span class="input-group-text" id="basic-addon3">https://</span>
+										<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+									  </div>
+									</div>
+									<div class="col-md-6">
+									  <label for="basic-url" class="form-label">Youtube Channel</label>
+									  <div class="input-group mb-3">
+										<span class="input-group-text" id="basic-addon3">youtube.com/</span>
+										<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+									  </div>
+									</div>
+									<div class="mb-3 col-md-12">
+										<label for="validationCustom04" class="form-label">Country</label>
+										<select class="form-select" id="validationCustom04" required>
+										  <option selected disabled value="">Choose...</option>
+										  <option>...</option>
+										</select>
+									</div>
+									<div class="mb-3 col-md-6">
+										<label for="validationCustom01" class="form-label">Street Address</label>
+										<input type="text" class="form-control" value="">
+									</div>
+									<div class="mb-3 col-md-6">
+										<label for="validationCustom01" class="form-label">State</label>
+										<input type="text" class="form-control" value="">
+									</div>
+									<div class="mb-3 col-md-6">
+										<label for="validationCustom01" class="form-label">City</label>
+										<input type="text" class="form-control" value="">
+									</div>
+									<div class="mb-3 col-md-6">
+										<label for="validationCustom01" class="form-label">Zip</label>
+										<input type="text" class="form-control" value="">
+									</div>
+									<div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+										<small class="form-check-label" for="invalidCheck">
+											Agree to terms and conditions
+										</small>
+										<div class="invalid-feedback">
+											You must agree before submitting.
+										</div>
+									</div>
+									<div class="col-md-12 text-center">
+										<div class="input-group mb-3 text-center submit">
+											<input type="submit" value="Save">
+										</div>
+									</div>					
+								</form>
+							</div>
+						</div>
+						<!-- ========================= -->
+						<div class="row mt-4 mx-auto">
+							<div class="col-md-6">
+								<div class="account-setting">
+									<h3>Notification</h3>
+									<p>Customize Which notifications are sent to the affiliate</p>
+									<a href="" data-bs-toggle="modal" data-bs-target="#notification">Modify Notification Preference</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="account-setting">
+									<h3>Cookie Duration</h3>
+									<p>Default (1 week)</p>
+									<a href="" data-bs-toggle="modal" data-bs-target="#cookieDuration">Change</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="account-setting">
+									<a href="" data-bs-toggle="modal" data-bs-target="#changePass">Change Password</a>
+									<a href="" data-bs-toggle="modal" data-bs-target="#changeEmail">Change Email Address</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="account-setting">
+									<h3>Delete Account</h3>
+									<p>Permanently delete affiliate's acccount and all their data</p>
+									<a href="" class="delete" data-bs-toggle="modal" data-bs-target="#deleteAccount">Delete Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+		</main>
+	</section>
+	<!-- ********************************Logout Model************************************************* -->
+	<div class="modal fade" id="logOut" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content logout-content">
+				<div class="modal-header logout-header">
+				<p class="text-center"><i class="fa-solid fa-triangle-exclamation"></i></p>
+				</div>
+				<div class="modal-body logout-body text-center">
+				<h2>Are You Sure!</h2>
+				<p class="mt-2">Don't worry all your changes are saved.<br>Feel free to log back in.</p>
+				</div>
+				<div class="modal-footer logout-footer">
+				<a type="button" class="btn btn-secondary dismiss" data-bs-dismiss="modal">Cancle</a>
+				<a type="button" class="btn btn-primary logout">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <!-- ********************************Manual Commission************************************************* -->
+	 <div class="modal fade" id="manualCommission" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content commission-modal">
+                <div class="commission-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">Assign Manual Commission</h5>
+					<p>Applies on all products (overrides the default commission)</p>
+                </div>
+                <div class="modal-body commission-body">
+                    <form class="row">
+                        <div class="col mb-3">
+							<label for="inputState" class="form-label">Commission Type</label>
+							<select id="commission" class="form-select">
+							  <option selected>Percentages</option>
+							  <option>Falt Rate</option>
+							</select>
+						</div>
+                        <div class="input-group mb-3">
+							<span class="input-group-text" id="basic-addon1">%</span>
+							<input type="number" class="form-control" placeholder="10" aria-label="Username" aria-describedby="basic-addon1">
+						</div>
+                    </form>
+                </div>
+                <div class="commission-footer">
+                    <a type="button" class="dismiss" data-bs-dismiss="modal">Dismiss</a>
+                    <a type="button" class="save">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	 <!-- ********************************Switch Commission************************************************* -->
+	 <div class="modal fade" id="switchCommission" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content commission-modal">
+                <div class="commission-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">Action Alert ?</h5>
+					<p>Switch to default commission?</p>
+                </div>
+                <div class="commission-footer mt-4">
+                    <a type="button" class="dismiss" data-bs-dismiss="modal">Dismiss</a>
+                    <a type="button" class="save">confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- ==================Notification preference ===============================-->
+	<div class="modal fade" id="notification" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Notification Preference</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				  <div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+					<label class="form-check-label" for="flexCheckChecked">
+						New sale notification
+					</label>
+				  </div>
+				  <div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+					<label class="form-check-label" for="flexCheckChecked">
+						Sale updated notification
+					</label>
+				  </div>
+				  <div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+					<label class="form-check-label" for="flexCheckChecked">
+						Payment processed notification
+					</label>
+				  </div>
+				  <div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+					<label class="form-check-label" for="flexCheckChecked">
+						Newsletter email
+					</label>
+				  </div>
+				  <div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+					<label class="form-check-label" for="flexCheckChecked">
+					 Other
+					</label>
+				  </div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- ==================Update password modal ===============================-->
+	<div class="modal fade" id="changePass" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#someWhere">
+						<div class="mb-3 col">
+							<label for="exampleFormControlInput1" class="form-label">Current Password<span>*</span></label>
+							<input type="text" class="form-control" id="exampleFormControlInput1" required>
+						</div>
+						<div class="mb-3 col">
+							<label for="exampleFormControlInput1" class="form-label">New Password<span>*</span></label>
+							<input type="text" class="form-control" id="exampleFormControlInput1" required>
+						</div>
+						<div class="mb-3 col">
+							<label for="exampleFormControlInput1" class="form-label">Confirm Password<span>*</span></label>
+							<input type="text" class="form-control" id="exampleFormControlInput1" required>
+						</div>
+						<a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</a>
+						<a type="submit" class="btn btn-primary">Update</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ==================Update Email modal ===============================-->
+	<div class="modal fade" id="changeEmail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Change Email</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#someWhere">
+						<div class="mb-3 col">
+							<label for="exampleFormControlInput1" class="form-label">Email<span>*</span></label>
+							<input type="email" class="form-control" id="exampleFormControlInput1" required placeholder="existing email rendered here">
+						</div>
+						<a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</a>
+						<a type="submit" class="btn btn-primary">Update</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ==================Update Cookie Duration modal ===============================-->
+	<div class="modal fade" id="cookieDuration" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Change Email</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Leave this field empty to keep defaut Cookie Duration</p>
+					<form action="#someWhere">
+						<div class="mb-3 col">
+							<label for="basic-url" class="form-label">(1 Week)</label>
+							<div class="input-group mb-3">
+								<span class="input-group-text" id="basic-addon3">Days</span>
+								<input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+							</div>
+						</div>
+						<a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</a>
+						<a type="submit" class="btn btn-primary">Update</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ==================Delete account modal ===============================-->
+	<div class="modal fade" id="deleteAccount" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Action Alert !</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Enter <strong class="fw-bold">Delete</strong> to complete the action</p>
+					<form action="#someWhere" class="mt-2">
+						<div class="mb-3 col">
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+							</div>
+						</div>
+						<a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</a>
+						<a type="submit" class="btn btn-danger">Delete</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function displayPaymentMethod(answer){
+			console.log(answer.value);
+			if(answer.value == 1){
+				document.getElementById('upi').classList.remove('d-none');
+			} else{
+				document.getElementById('upi').classList.add('d-none');
+			}
+			if(answer.value == 2){
+				document.getElementById('paypal').classList.remove('d-none');
+			} else{
+				document.getElementById('paypal').classList.add('d-none');
+			}
+			if(answer.value == 3){
+				document.getElementById('card').classList.remove('d-none');
+			} else{
+				document.getElementById('card').classList.add('d-none');
+			}
+			if(answer.value == 4){
+				document.getElementById('bankTransfer').classList.remove('d-none');
+			} else{
+				document.getElementById('bankTransfer').classList.add('d-none');
+			}
+		};
+	</script>
+    <!-- ==============================Bootstrap script============================ -->
+    <script src="../bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ==============================ApexChart script CDN ============================ -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- ==============================Local script============================ -->
+    <script src="../dashboard-pages/script/global-script.js"></script>
+    <script src="../dashboard-pages/script/dashboard.js"></script>
+    </body>
+</html>    

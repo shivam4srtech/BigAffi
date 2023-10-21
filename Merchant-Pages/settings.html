@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BIGAFFI: Merchant Dashboard</title>
+        <link rel="shortcut icon" href="../images/bigaffilogo.jpeg" type="image/x-icon">
+        <!-- *******************Fontawesome icons***************************** -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+        <!-- *********************************Boxi-icons************************************ -->
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <!-- ***********************************Montserrat********************************** -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway:wght@800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+        <!-- *******************local stylesheet******************** -->
+        <link rel="stylesheet" href="../dashboard-pages/stylesheet/global.css">
+        <link rel="stylesheet" href="../dashboard-pages/stylesheet/dashboard.css">
+        <link rel="stylesheet" href="./style/settings.css">
+    </head>
+    <body>
+    <!-- ***********************Dashboard Sidebar************************************** -->
+    <!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="./merchant.html" class="brand"><img class="logo" style="height: 36px; width: 36px;" src="../images/bigaffilogo.jpeg" alt=""> Big<span>Affi</span></a>
+		<ul class="side-menu">
+			<li><a href="./merchant.html" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
+			<li class="divider" data-text="Marketplace">Marketplace</li>
+			<li>
+				<a href="#"><i class='bx bxs-group icon'></i>Merchant<i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="./affiliate.html">Affiliates</a></li>
+					<li><a href="./mobile-app.html">Mobile App</a></li>
+					<li><a href="./sales.html">Sales</a></li>
+                    <li><a href="./leaderbors.html">Leaderboard</a></li>
+                    <li><a href="./multilevel.html">MLM</a></li>
+				</ul>
+			</li>
+			<li><a href="./commission.html"><i class="fa-solid fa-percent icon"></i> Commission</a></li>
+            <li><a href="./coupon.html"><i class="fa-solid fa-tag icon"></i> Coupon</a></li>
+			<li><a href="./payment.html"><i class='bx bx-dollar icon' ></i> Payment</a></li>
+            <li><a href="./analytics.html"><i class="fa-solid fa-chart-line icon"></i>Analytics</a></li>
+            <li class="divider" data-text="Uploads">Uploads</li>
+			<li>
+				<a href="#"><i class="fa-solid fa-image icon"></i>  Media Center <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+                    <li><a href="./upload-media.html"><i class="fa-solid fa-image icon"></i> Media</a></li>
+                    <li><a href="./marketplace.html"><i class="fa-solid fa-shop icon"></i>Marketplace</a></li>
+                    <li><a href="./store.html"><i class="fa-solid fa-earth-americas icon"></i>Store</a></li>
+					<li><a href="#"><i class='bx bx-lock-alt icon' ></i> Privacy</a></li>
+					<li><a href="#"><i class='bx bxs-contact icon' ></i> T & C</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="fa-solid fa-bullhorn icon"></i>  Campaign <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+                    <li><a href="./create-campain.html">Create Campaign</a></li>
+                    <li><a href="./all-campaign.html">All Campaign</a></li>
+				</ul>
+			</li>
+			<li><a href="./settings.html"><i class='bx bx-cog icon' ></i>Settings</a></li>
+			<li><a href="#"><i class='bx bxs-contact icon' ></i> Contact Us</a></li>
+			<li><a href="#" data-bs-toggle="modal" data-bs-target="#logOut"><i class='bx bxs-log-out-circle icon' ></i> Logout</a></li>
+		</ul>
+		<div class="ads">
+			<div class="wrapper">
+				<a href="#" class="btn-upgrade">Upgrade</a>
+				<p>Become a <span>PRO</span> member and enjoy <span>All Features</span></p>
+			</div>
+		</div>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<form action="#">
+				<div class="form-group">
+					<input type="text" placeholder="Search...">
+					<i class='bx bx-search icon' ></i>
+				</div>
+			</form>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-bell icon' ></i>
+				<span class="badge">5</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon'></i>
+				<span class="badge">8</span>
+			</a>
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="../images/female_avatar_efig.svg" alt="">
+				<ul class="profile-link">
+					<li><a href="#"><i class='bx bxs-user-circle icon' ></i> Profile</a></li>
+					<li><a href="./settings.html"><i class='bx bxs-cog' ></i> Settings</a></li>
+					<li><a href="#" data-bs-toggle="modal" data-bs-target="#logOut"><i class='bx bxs-log-out-circle' ></i> Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="d-flex align-items-center">
+                <div class="me-auto">
+                    <h1 class="title">Setting</h1>
+                </div>
+            </div>
+			<ul class="breadcrumbs">
+				<li><a href="./merchant.html">Home</a></li>
+				<li class="divider">/</li>
+				<li><a href="./affiliate.html" class="active">setting</a></li>
+			</ul>
+            <div class="card mt-4">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs id="myTab" role="tablist"">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#generalSetting" aria-controls="generalSetting" aria-selected="true">General Setting</a>
+                    </li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#notification" aria-controls="notification" aria-selected="true">Notification</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#payment" aria-controls="payment" aria-selected="true">Payment</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#report" aria-controls="report" aria-selected="true">Report</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#integration" aria-controls="integration" aria-selected="true">Integration</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#sdk" aria-controls="sdk" aria-selected="true">SDK</a>
+					</li>
+					<li class="nav-item" role="presentation">
+						<a class="nav-link" aria-current="true" href="#" id="home-tab" data-bs-toggle="tab" data-bs-target="#advance" aria-controls="advance" aria-selected="true">Advance</a>
+					</li>
+                  </ul>
+                </div>
+                <div class="card-body tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="generalSetting" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div class="row settings">
+							<div class="col-md-6">
+								<h4>Set Cookie Duration</h4>
+								<p>Cookie duration refers to the period a web cookie stays active, storing user data and preferences before automatically expiring or being deleted.</p>
+							</div>
+							<div class="col-md-6">
+								<form action="#somewhere">
+									<div class="col mb-3">
+										<select id="paymentMethod" class="form-select">
+										  <option selected>Days</option>
+										  <option value="1">Hours</option>
+										</select>
+									</div>
+									<div class="col mb-3">
+										<input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
+									</div>
+									<div class="text-center">
+										<a href="#000" class="submit">Save</a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Timezone</h4>
+								<p>The time mentioned in Data &amp reports to be downloaded from this site is based on your selected time zone </p>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<select id="paymentMethod" class="form-select">
+										<option selected>Select Time Zone</option>
+										<option value="1" id="choice">+ 5:30 GMT Asia/Calcutta	India Standard Time</option>
+										<option value="2">+ 6: GMT Asia/Rangoon	Myanmar Time</option>
+										<option value="3">+ 7: GMT Asia/Rangoon	Myanmar Time</option>
+										<option value="4">+ 7:30 GMT Asia/Rangoon	Myanmar Time</option>
+										<option value="5">+ 8: GMT Asia/Rangoon	Myanmar Time</option>
+										<option value="6">+ 8:30 GMT Asia/Rangoon	Myanmar Time</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Signup Bonus</h4>
+								<p>Signup Bonus automatically assigned to the affilited after completion of registration process</p>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<div class="input-group mb-3">
+										<span class="input-group-text" id="basic-addon">$</span>
+										<input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Affiliate Registrations</h4>
+								<p>You can Manage registrations of affiliates &amp their users</p>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<div class="tab-box">
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Allow registrations from affiliate page
+											</label>
+										</div>
+										<small>Allow users to register from the public registration page at javacontrols.goaffpro.com/create-account</small>
+									</div>
+									<div class="tab-box mt-5">
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Auto Approve
+											</label>
+										</div>
+										<small>Desablign this option will restrict affiliates to access the dashbord untill you allow them to access.</small>
+									</div>
+								</div>	
+							</div>
+						</div>
+                    </div>
+					<!-- =========Notification============= -->
+					<div class="tab-pane fade show" id="notification" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div class="row settings">
+							<div class="col-md-6">
+								<h4>Contact Info</h4>
+								<p>Kindly provide your valid contact info so that your affilites can directly communicate with you.</p>
+							</div>
+							<div class="col-md-6">
+								<form action="#somewhere">
+									<div class="mb-3">
+										<label for="formGroupExampleInput" class="form-label p-1">Email Address</label>
+										<input type="email" class="form-control" id="formGroupExampleInput">
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<label for="basic-url" class="form-label">Instagram</label>
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon3">@</span>
+												<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<label for="basic-url" class="form-label">Twitter X</label>
+											<div class="input-group mb-3">
+												<span class="input-group-text" id="basic-addon3">@</span>
+												<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+											</div>
+										</div>
+									</div>
+									<div class="text-center mt-4">
+										<a href="#000" class="submit">Save</a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Personal Notification</h4>
+								<p>your prefered notification will send to <a href="">josTheBoss@jaldiKro.com</a></p>
+								<a href="" class="customize-template">Customize email templates</a>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<div class="tab-box">
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When new affiliate registers
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When a new affiliate sale is made
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When an affiliate uploads a new file
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Affiliate's Notifications</h4>
+								<p>These notification will send to your affilite's registered email address</p>
+								<a href="" class="customize-template">Customize email templates</a>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<div class="tab-box">
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Affiliate email verification email
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When affiliate account is approved
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When affiliate account is rejected or blocked
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When affiliate account is deleted
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When a new sale is made
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When a new sale is approved
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When a sale is updated
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When a sale is rejected
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												When affiliate payment is processed
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Welcome Message</h4>
+								<p>A welcome message will send to affilites at their registered email address once their account is approved.</p>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<a href="" class="customize-template">Customize email templates</a>
+								</div>
+							</div>
+						</div>
+                    </div>
+					<!-- ================Payment==================== -->
+					<div class="tab-pane fade show" id="payment" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div class="row settings">
+							<div class="col-md-6">
+								<h4>Global Payment Methods</h4>
+								<p>These are the worldwide supported payment methods. Your affiliates can see only those payment method which are checked by you. </p>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<div class="tab-box">
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												PayPal
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Debit Card
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Bitcoin
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Cash
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Bank Transfer (SWIFT/ACH)
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Payoneer
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Payment Methods for Indian Affiliates</h4>
+								<p>Global Pyament methods are also supported for affiliates from Indian origin</p>
+								<p>Here are some additional payment methods for india affiliates</p>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<div class="tab-box">
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Paytm
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												UPI
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												SBI Cards
+											</label>
+										</div>
+										<div class="form-check check-box">
+											<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+											<label class="form-check-label" for="flexCheckChecked">
+												Net Banking
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Choose Default Payment Method</h4>
+								<p>Select deafault payment method for new affiliates</p>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<select id="paymentMethod" class="form-select">
+										<option selected>Paypal</option>
+										<option value="1">Net Banking</option>
+										<option value="2">Payoneer</option>
+										<option value="3">Bitcoin</option>
+										<option value="4">Debit Card</option>
+										<option value="5">Bank Transfer (SWIFT/ACH)</option>
+										<option value="6">UPI</option>
+										<option value="6">Paytm</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Customize commission hold time</h4>
+								<p>Restrict affiliates commission for a certain period of time, after which it will payable to the affiliates.</p>
+							</div>
+							<div class="col-md-6">
+								<div class="input-group mb-3">
+									<input type="number" class="form-control" aria-describedby="basic-addon2">
+									<span class="input-group-text" id="basic-addon2">Days</span>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Payment T &amp C</h4>
+								<p>Your payment terms and conditions for affiliates</p>
+							</div>
+							<div class="col-md-6">
+								<div class="col mb-3">
+									<label for="inputReport" class="form-label">Select Payment Terms &amp Condition</label>
+									<select id="paymentMethod" class="form-select" onchange="paymentTerm(this)">
+									  <option selected>Default</option>
+									  <option value="1">Custom Payment Terms</option>
+									</select>
+								</div>
+								<div id="custome" class="d-none">
+									<label for="formGroupExampleInput" class="form-label">Custom Term</label>
+									<input type="text" class="form-control" id="formGroupExampleInput" placeholder="enter custom payment term link ">
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Minimum Payout</h4>
+								<p>Amount will be payable after it touches minimum payout mark.</p>
+								<p>Leave it blank for no payout restriction</p>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<label for="basic-url" class="form-label">Minimum Payout</label>
+									<div class="input-group mb-3">
+										<span class="input-group-text" id="basic-addon3">$</span>
+										<input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Tax/TDS &amp VAT</h4>
+								<p>Taxes submitted by you on behalf of your affiliates will be adjusted from their payouts, reflecting the net amount in their final payments.</p>
+							</div>
+							<div class="col-md-6">
+								<form action="#somewhere">
+									<div class="col mb-3">
+										<label for="basic-url" class="form-label p-1">Tax Type</label>
+										<select id="textType" class="form-select">
+										  <option selected>Paid by affiliate</option>
+										  <option value="1">Paid by Merchant</option>
+										</select>
+									</div>
+									<div class="col mb-3">
+										<label for="basic-url" class="form-label p-1">Tax &percnt;</label>
+										<input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
+									</div>
+									<div class="text-center">
+										<a href="#000" class="submit">Save</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!-- ================Report==================== -->
+					<div class="tab-pane fade show" id="report" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+						<div class="row settings">
+							<h4 class="text-center my-4">Download Report</h4>
+							<div class="col-md-6 mx-auto report-box">
+								<div class="">
+									<form action="#somewhere">
+										<div class="col mb-3">
+											<label for="inputReport" class="form-label p-1">Report Type</label>
+											<select id="inputReport" class="form-select">
+											  <option selected>Affiliates</option>
+											  <option>Order/Sales</option>
+											  <option>Product</option>
+											  <option>Payout</option>
+											  <option>Traffic</option>
+											  <option>Transaction</option>	
+											</select>
+										</div>
+										<div class="row mb-3">
+											<div class="col-md-6">
+												<label for="exampleFormControlInput2" class="form-label p-1">Start Date</label>
+												<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+											</div>
+											<div class="col-md-6">
+												<label for="exampleFormControlInput2" class="form-label p-1">Final Date</label>
+												<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="select date" onfocus="(this.type = 'date')"  id="date">
+											</div>
+											<small>Report to be downloaded within selected date frame</small>
+										</div>
+										<div class="col mb-3">
+											<label for="inputState" class="form-label p-1">Additional Filter</label>
+											<select id="inputState" class="form-select">
+											  <option selected>Filter by Affiliate</option>
+											  <option>Filter by group</option>
+											  <option>Filter by tag</option>
+											</select>
+										</div>
+										<div class="col mb-3">
+											<label for="inputState" class="form-label p-1">Download Format</label>
+											<select id="inputState" class="form-select">
+											  <option selected>PDF</option>
+											  <option>docs</option>
+											  <option>txt</option>
+											  <option>Excel</option>
+											</select>
+										</div>
+										<div id="liveAlertPlaceholder"></div>
+										<a type="button" class="btn  alert-btn" id="liveAlertBtn">Generate Report</a>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- =======================Integration====================== -->
+					<div class="tab-pane fade show" id="integration" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div class="row settings">
+							<div class="col-md-6">
+								<h4>Paypal Payouts</h4>
+								<p>Efficiently transfer earnings to your affiliates right within the application.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div class="">
+									<a href="./paypal-setup.html" class="submit">Setup Instruction</a>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Amazon Attribution</h4>
+								<p>
+									If you have Amazon Brand, integrate your Amazon brand with your program for smooth affiliate sales tracking on Amazon.
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div class="">
+									<a href="#000" class="submit">Complete Setup</a>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Enable Google Recaptcha</h4>
+								<p>
+									enabling Google reCAPTCHA on the login page will enhance security, reduced spam, and protection against automated login attempts.	
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div>
+									<label class="switch">
+										<input class="switch-input" type="checkbox" / checked>
+										<span class="switch-label" data-on="Enable" data-off="Desable"></span> 
+										<span class="switch-handle"></span> 
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Google tag manager</h4>
+								<p>
+									Conversion tracking is automatic when recording conversions in Google Analytics.
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div class="">
+									<a href="#000" class="submit" data-bs-toggle="modal" data-bs-target="#googleTagManager">setup instruction</a>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Third party checkout</h4>
+								<p>
+									Integrate external checkout applications like shopBase Checkout with the app.
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div class="">
+									<a href="#000" class="submit" data-bs-toggle="modal" data-bs-target="#thirdParty" data-bs-whatever="@mdo">see instruction</a>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>CampaignMonitor</h4>
+								<p>
+									Sync affiliate data with campaignmonitor
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div class="">
+									<a href="#000" class="submit">Sync</a>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>ActiveCampaign</h4>
+								<p>
+									Sync affiliate data with active campaign.
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div class="">
+									<a href="#000" class="submit">Integrate</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- =======================SDK====================== -->
+					<div class="tab-pane fade show " id="sdk" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div class="row settings">
+							<div class="col-md-6">
+								<h4>Secure Payload</h4>
+								<p>Only allow secure payloads for conversion callback</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div>
+									<label class="switch">
+										<input id="myCheck" onclick="playloadKey()" class="switch-input" type="checkbox"/>
+										<span class="switch-label" data-on="Enable" data-off="Desable"></span> 
+										<span class="switch-handle"></span> 
+									</label>
+								</div>
+								<div id="key" style="display: none;">
+									<label for="formGroupExampleInput" class="form-label" id="input">Payload Key</label>
+									<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Existing key fetched here">
+									<div class="d-flex refresh-key">
+										<a href="#000" class="me-auto">Refresh Key</a>
+										<a href="#000" class="ms-auto">Copy</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Rest JSON</h4>
+								<p>
+									Allows the app to call various functions on your API.
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div class="">
+									<a href="#000" class="submit">Edit JSON</a>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Product List</h4>
+								<p>
+									Input or upload your product list, allowing you to configure commissions later in the 'New product commission' section of the Commissions page
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div class="">
+									<a href="#000" class="submit">Upload product</a>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Custom Javascript</h4>
+								<p>
+									enabSupplementary custom JavaScript loaded alongside the referral tracking script, simplifying the creation of conversion tracking using just one tag.
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div class="">
+									<a href="#000" class="submit">Edit Script</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- =======================Advance Tab====================== -->
+					<div class="tab-pane fade show" id="advance" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                        <div class="row settings">
+							<div class="col-md-6">
+								<h4>Block Commission</h4>
+								<p>
+									Prevents commission for clicks originating from specified domains/pages, with support for partial matches and regular expressions.
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div>
+									<label for="formGroupExampleInput" class="form-label p-1">Enter Domain/IP <span>Separate each with comma (,)</span></label>
+									<textarea class="form-control" placeholder="One domain / IP in one line"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Affiliate Conflict Resolution</h4>
+								<p>In the event a customer utilizes links from two different affiliates, which affiliate should receive the credit?</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<select id="paymentMethod" class="form-select">
+										<option selected>Default (The last affiliate)</option>
+										<option value="1">Both Affiliate</option>
+										<option value="2">First Affiliate</option>
+										<option value="3">None</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Shortened Refferal Links</h4>
+								<p>Shortened refferal links are abbreviated URLs, created to simplify long web addresses and make sharing and tracking easier and more convenient.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<label for="formGroupExampleInput" class="form-label p-1">URL Shortener</label>
+									<select id="paymentMethod" class="form-select">
+										<option selected>bit.ly</option>
+										<option value="1">tinyurl</option>
+										<option value="2">shortlink</option>
+										<option value="3">None</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Default Referral Link</h4>
+								<p>Customize the primary referral link displayed in the affiliate portal to a preferred or unique link of your choice.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<form action="#somewhere">
+									<div class="mb-3">
+										<input type="text" class="form-control" id="formGroupExampleInput">
+									</div>
+									<div class="text-center mt-4">
+										<a href="#000" class="submit">Submit</a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Refferal Code Style</h4>
+								<p>Referral code styles refer to the format or structure used to create unique codes for tracking and identifying affiliates or referrals</p>
+								<p class="mt-2">The refferal code often have alphanumeric characters. Common styles include random strings, usernames, or a combination of initials and numbers.</p>
+								<h3>Example refferal link:</h3>
+								<span class="example-refferal">https://udemy.com/?ref=jaeavgpshd</span>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div>
+									<h5>Random string</h5>
+									<a href="#000" data-bs-toggle="modal" data-bs-target="#refferalStyle" class="change-style">Change</a>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Multiple Referral Codes</h4>
+								<p>Affiliates can use and manage up to 10 distinct referral codes individually</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div>
+									<div class="mt-3">
+										<label class="switch">
+											<input class="switch-input" type="checkbox"/>
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>AMP Pages Tracking</h4>
+								<p>Tracking AMP (Accelerated Mobile Pages) involves monitoring user interactions and engagement on lightweight, fast-loading web pages for mobile, providing insights for optimization.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div class="">
+									<a href="#000" class="submit" data-bs-toggle="modal" data-bs-target="#ampTracking">setup</a>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Third Party Tracking</h4>
+								<p>Insert the tracking code into the landing page, lead page, or WordPress blog to monitor affiliate referral activity.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div>
+									<label class="switch">
+										<input id="trackingCheck" onclick="tracking()" class="switch-input" type="checkbox"/>
+										<span class="switch-label" data-on="Enable" data-off="Desable"></span> 
+										<span class="switch-handle"></span> 
+									</label>
+								</div>
+								<div id="embedCode" style="display: none;">
+									<label for="formGroupExampleInput" class="form-label p-1" id="input">Embed code</label>
+									<textarea class="form-control" placeholder="JS Code rendered here"></textarea>
+									<div class="d-flex refresh-key">
+										<a href="#000" class="me-auto">Copy</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Auto approve affiliates from</h4>
+								<p>
+									Auto approve affiliates coming from utm_source (enter one source per line).
+								</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6 integration">
+								<div>
+									<form action="#someWhere">
+										<textarea class="form-control" placeholder="enter one source per line"required></textarea>
+										<div class="text-center mt-4">
+											<a href="#000" class="submit">save</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Sale reporting</h4>
+								<p>Report sales with order amount or subtotal</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<select id="paymentMethod" class="form-select">
+										<option selected>Commission value (order subtotal)</option>
+										<option value="1">Order Total</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Extra fields</h4>
+								<p>Supplements the affiliate's admin page with additional fields for managing ERP data or facilitating API integration.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div class="col">
+									<select id="paymentMethod" class="form-select">
+										<option selected>No Extra Field</option>
+										<option value="1">1</option>
+										<option value="1">2</option>
+										<option value="1">3</option>
+										<option value="1">4</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Auto Ref linking</h4>
+								<p>Automatically appends the referral code to outbound links from your store, streamlining the tracking process for affiliate-driven traffic.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div>
+									<div class="mt-3">
+										<label class="switch">
+											<input class="switch-input" type="checkbox"/>
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Auto Ref linking</h4>
+								<p>Extend the tracking script's cache duration for improved script delivery efficiency, noting a delay in applying admin panel changes to tracking parameters.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div>
+									<label for="formGroupExampleInput" class="form-label">Cache Duration</label>
+									<div class="input-group mb-3">
+										<input type="number" class="form-control" aria-describedby="basic-addon2">
+										<span class="input-group-text" id="basic-addon2">Seconds</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Multi-Currency</h4>
+								<p>Automatically convert affiliate commissions to the store's primary currency for seamless financial transactions.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div>
+									<div class="mt-3">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" checked/>
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<h4 class="text-center">Conversion Preference Order</h4>
+							<p class="text-center">The preference order of conversion tests for sale attribution</p>
+							<div class="col-md-8 conversion mx-auto">
+								<div class="conversion-box mt-4">
+									<div>
+										<p>Coupon Code Tracking</p>
+									</div>
+									<div class="switch-box">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" checked/>
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+								<div class="conversion-box">
+									<div>
+										<p>Customer Affiliate Connection</p>
+									</div>
+									<div class="switch-box">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" checked/>
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+								<div class="conversion-box">
+									<div>
+										<p>Refferal Link Tracking</p>
+									</div>
+									<div class="switch-box">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" />
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+								<div class="conversion-box">
+									<div>
+										<p>Personal Order</p>
+									</div>
+									<div class="switch-box">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" checked/>
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+								<div class="conversion-box">
+									<div>
+										<p>Custome Tracking Rules</p>
+									</div>
+									<div class="switch-box">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" />
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+								<div class="conversion-box">
+									<div>
+										<p>System Reported Tracking</p>
+									</div>
+									<div class="switch-box">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" checked/>
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+								<div class="conversion-box">
+									<div>
+										<p>Fuzzy Detection Algorithm</p>
+									</div>
+									<div class="switch-box">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" />
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+								<div class="conversion-box">
+									<div>
+										<p>Party Link</p>
+									</div>
+									<div class="switch-box">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" checked/>
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+								<div class="conversion-box">
+									<div>
+										<p>subscription Rewenals</p>
+									</div>
+									<div class="switch-box">
+										<label class="switch">
+											<input class="switch-input" type="checkbox" />
+											<span class="switch-label" data-on="Allow" data-off="Deny"></span> 
+											<span class="switch-handle"></span> 
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row settings">
+							<div class="col-md-6">
+								<h4>Program Status</h4>
+								<p>Deactivates the affiliate program's ability to monitor website visits and sales.</p>
+								<a href="" class="video-modal" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-bs-toggle="modal" data-bs-target="#videoModal">Need Help?<i class="fa-solid fa-video"></i></a>
+							</div>
+							<div class="col-md-6">
+								<div class="alert alert-danger" role="alert">
+									<h4 class="alert-heading">CAUTION !</h4>
+									<p>Enabling this option entirely suspends affiliate program tracking for visits and orders. Please use it judiciously.</p>
+								</div>
+								<div>
+									<a href="#000" class="btn btn-danger text-white">Turn Off</a>
+								</div>
+							</div>
+						</div>
+					</div>							
+                </div>
+            </div>
+		</main>
+	</section>
+	<!-- ============================Modal Starts HERE======================================================= -->
+	<!-- ********************************Logout Model************************************************* -->
+	<div class="modal fade" id="logOut" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content logout-content">
+				<div class="modal-header logout-header">
+				<p class="text-center"><i class="fa-solid fa-triangle-exclamation"></i></p>
+				</div>
+				<div class="modal-body logout-body text-center">
+				<h2>Are You Sure!</h2>
+				<p class="mt-2">Don't worry all your changes are saved.<br>Feel free to log back in.</p>
+				</div>
+				<div class="modal-footer logout-footer">
+				<a type="button" class="btn btn-secondary dismiss" data-bs-dismiss="modal">Cancle</a>
+				<a type="button" class="btn btn-primary logout">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ========================Amp Trackning========================= -->
+	<div class="modal fade" id="ampTracking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalLabel">AMP Page Tracking</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div>
+					<div>
+						<h4>Step 1</h4>
+						<p>Add the following code to the head of the page</p>
+					</div>
+					<div class="">
+						<label for="formGroupExampleInput" class="form-label"><code><span><</span> head <span>></span></code></label>
+						<textarea class="form-control" placeholder="JS Code rendered here"></textarea>
+						<label for="formGroupExampleInput" class="form-label mt-4"><code><span><</span> /head <span>></span></code></label>
+					</div>
+					<div class=" btngroup text-center">
+						<a type="button" class="">Copy Code</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h4>Step 2</h4>
+						<p>Add the following code to the bottom of the body of the page</p>
+					</div>
+					<div class="">
+						<label for="formGroupExampleInput" class="form-label"><code><span><</span> body <span>></span></code></label>
+						<textarea class="form-control" placeholder="JS Code rendered here"></textarea>
+						<label for="formGroupExampleInput" class="form-label mt-4"><code><span><</span> /body <span>></span></code></label>
+					</div>
+					<div class=" btngroup text-center">
+						<a type="button" class="">Copy Code</a>
+					</div>
+				</div>
+			</div>
+		  </div>
+		</div>
+	<!-- =======================Video Modal===================================== -->
+	<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h2>Manually assign sales to an affiliate.</h2>	
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <div class="embed-container">
+				<iframe width="100%" height="350" src="https://www.youtube.com/embed/HBdcL7YsdBY" frameborder="0" allowfullscreen></iframe>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<!-- ========================Third Party Checkout========================= -->
+	<div class="modal fade" id="thirdParty" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalLabel">Third party checkout</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>
+					Copy the following code and paste this in your custom checkout's order status page (or thank you page or order confirmation page)
+				</p>
+				<div>
+					<img src="../dashboard-pages/images/third-party.png" alt="">
+				</div>
+			  <form>
+				<div class="jscode">
+					<label for="formGroupExampleInput" class="form-label">Code</label>
+					<textarea class="form-control" placeholder="JS Code rendered here"></textarea>
+				</div>
+			  </form>
+			</div>
+			<div class=" btngroup text-center">
+			  <a type="button" class="">Copy Code</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <!-- ==============================Google Tag manager===================== -->
+	  <div class="modal fade" id="googleTagManager" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Step 1</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div>
+					<p>Ensure that the base tracking code is present in your store's pages including the page where your <em>gtag('event','conversion')</em> code is present.</p>
+				</div>
+				<div class="alert alert-success my-2" role="alert">
+					<p>Important, please ensure that the goaffpro code loads before <em>gtag('event','conversion')</em></p>
+				</div>
+				<div>
+					<img src="../dashboard-pages/images/code-img.png" alt="">
+				</div>
+				<div class="jscode my-2">
+					<label for="formGroupExampleInput" class="form-label">Code</label>
+					<textarea class="form-control" placeholder="JS Code rendered here"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer d-flex align-items-center">
+			   <a type="button" class="modal-btn me-auto copy-code">Copy Code</a>
+			   <a class="modal-btn ms-auto next-btn" data-bs-target="#stepTwo" data-bs-toggle="modal">Step 2</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal fade" id="stepTwo" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Step 2</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div>
+					<p>Enable Google Tag Manager Automatic conversion module</p>
+					<span class="emt">Enable to proceed next step</span>
+				</div>
+				<div class="mt-3">
+					<label class="switch">
+						<input id="stepThree" onclick="stepThree()" class="switch-input" type="checkbox" />
+						<span class="switch-label" data-on="Enable" data-off="Desable"></span> 
+						<span class="switch-handle"></span> 
+					</label>
+				</div>
+			</div>
+			<div class="modal-footer d-flex align-items-center">
+				<a class="modal-btn me-auto copy-code" data-bs-target="#googleTagManager" data-bs-toggle="modal"><i class="fa-solid fa-angle-left"></i></a>
+				<a id="displayThree" style="display: none;" class="modal-btn ms-auto next-btn" data-bs-target="#thirdStep" data-bs-toggle="modal">Step 3</a>
+			</div>
+		</div>
+		</div>
+	  </div>
+	  <div class="modal fade" id="thirdStep" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Step 3</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			 <div>
+				<p>Verify and confirm everything works</p>
+			 </div>
+			 <div>
+				<h2 class="step">Step 3a</h2>
+				<p>Enable conversion data logging</p>
+			 </div>
+			 <div class="mt-3">
+				<label class="switch">
+					<input id="displayThreeB" onclick="displayThreeB()" class="switch-input" type="checkbox" />
+					<span class="switch-label" data-on="Enable" data-off="Desable"></span> 
+					<span class="switch-handle"></span> 
+				</label>
+			 </div>
+			 <div id="threeb" style="display: none;">
+				<h2 class="step">Step 3b</h2>
+				<p>Enable conversion data logging</p>
+			 </div>
+			</div>
+			<div class="modal-footer d-flex align-items-center">
+				<a class="modal-btn me-auto copy-code" data-bs-target="#stepTwo" data-bs-toggle="modal"><i class="fa-solid fa-angle-left"></i></a>
+				<a id="threebBtn" style="display: none;" type="button" class="modal-btn dismiss ms-auto next-btn" data-bs-dismiss="modal">Finish</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	<!-- ==================Change Refferal Link style===============================-->
+	<div class="modal fade" id="refferalStyle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Referral Code Style</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form action="#someWhere">
+						<div class="col mb-3">
+							<label for="formGroupExampleInput" class="form-label p-1">Referral Code given to affiliate on signup</label>
+							<select id="paymentMethod" class="form-select">
+								<option selected>Random String</option>
+								<option value="1">Random Number</option>
+								<option value="2">Sequence</option>
+								<option value="3">Affiliates Name</option>
+								<option value="3">Dictionary Words</option>
+							</select>
+						</div>
+						<div class="mb-3 col">
+							<label for="exampleFormControlInput1" class="form-label p-1">Refferal Code Length (>1)</label>
+							<input type="number" class="form-control" id="exampleFormControlInput1" required>
+						</div>
+						<a type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</a>
+						<a type="submit" class="btn btn-primary">Update</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function paymentTerm(answer){
+			console.log(answer.value);
+			if(answer.value == 1){
+				document.getElementById('custome').classList.remove('d-none');
+			} else{
+				document.getElementById('custome').classList.add('d-none');
+			}
+		};
+	</script>
+	<script>
+		function stepThree() {
+		  var checkBox = document.getElementById("stepThree");
+		  var text = document.getElementById("displayThree");
+		  if (checkBox.checked == true){
+			text.style.display = "block";
+		  } else {
+			 text.style.display = "none";
+		  }
+		}
+	</script>
+	<script>
+		function displayThreeB() {
+		  var checkBox = document.getElementById("displayThreeB");
+		  var text = document.getElementById("threeb");
+		  var textBtn = document.getElementById("threebBtn");
+		  if (checkBox.checked == true){
+			text.style.display = "block";
+		  } else {
+			 text.style.display = "none";
+		  }
+		  if (checkBox.checked == true){
+			textBtn.style.display = "block";
+		  } else {
+			textBtn.style.display = "none";
+		  }
+		}
+	</script>
+	<script>
+		function playloadKey() {
+		  var checkBox = document.getElementById("myCheck");
+		  var text = document.getElementById("key");
+		  if (checkBox.checked == true){
+			text.style.display = "block";
+		  } else {
+			 text.style.display = "none";
+		  }
+		}
+	</script>
+	<script>
+		function tracking() {
+		  var checkBox = document.getElementById("trackingCheck");
+		  var text = document.getElementById("embedCode");
+		  if (checkBox.checked == true){
+			text.style.display = "block";
+		  } else {
+			 text.style.display = "none";
+		  }
+		}
+	</script>
+	<script>
+			const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+			const alert = (message, type) => {
+			const wrapper = document.createElement('div')
+			wrapper.innerHTML = [
+				`<div class="alert alert-${type} alert-dismissible" role="alert">`,
+				`   <div>${message}</div>`,
+				'   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+				'</div>'
+			].join('')
+
+			alertPlaceholder.append(wrapper)
+			}
+
+			const alertTrigger = document.getElementById('liveAlertBtn')
+			if (alertTrigger) {
+			alertTrigger.addEventListener('click', () => {
+				alert('Report generated successfully <a href="#"> Click to download </a>', 'success')
+			})
+			}
+	</script>
+    <!-- ==============================Bootstrap script============================ -->
+    <script src="../bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ==============================Local script============================ -->
+    <script src="../dashboard-pages/script/global-script.js"></script>
+    <script src="../dashboard-pages/script/dashboard.js"></script>
+    </body>
+</html>    
